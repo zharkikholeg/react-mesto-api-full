@@ -173,7 +173,7 @@ module.exports.login = (req, res, next) => {
       // аутентификация успешна
       const token = jwt.sign(
         { _id: userId },
-        JWT_SECRET,
+        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
         { expiresIn: '7d' },
       );
 
