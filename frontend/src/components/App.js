@@ -38,7 +38,7 @@ function App(props) {
     api.getUser()
       .then(res => {
         console.log(res)
-        setCurrentUser(res);
+        setCurrentUser(res[0]);
       }).catch((err) => {
         console.log(err);
       })

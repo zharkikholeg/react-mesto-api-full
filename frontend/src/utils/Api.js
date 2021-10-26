@@ -84,7 +84,7 @@ class Api {
 
 
 const fetchConfig = {
-  url: "http://api.olegz.nomoredomains.rocks/",
+  url: "https://api.olegz.nomoredomains.rocks/",
   headers: {
     'Content-Type': 'application/json',
     authorization: `Bearer ${localStorage.getItem('jwt')}`

@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://api.olegz.nomoredomains.rocks';
+export const BASE_URL = 'https://api.olegz.nomoredomains.rocks';
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
@@ -11,7 +11,7 @@ export const register = (email, password) => {
   })
     .then((response) => {
       try {
-        if (response.status === 201) {
+        if (response.status === 200) {
           return response.json();
         }
       } catch (e) {

@@ -15,7 +15,7 @@ function Register(props) {
     if (email !== '' && password !== '') {
       register(email, password)
         .then((res) => {
-          //console.log(res);
+          console.log(res);
           if (res) {
             setEmail('');
             setPassword('');

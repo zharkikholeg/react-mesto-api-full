@@ -12,7 +12,6 @@ function Main(props) {
 
 
 
-
   const cardItems = props.cards.map((card) => (
     <Card card={card} key={card._id} onCardClick={props.onCardClick} onLikeClick={props.onLikeClick} onCardDelete={props.onCardDelete} />
   ));

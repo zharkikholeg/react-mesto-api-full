@@ -3,19 +3,18 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const validator = require('validator');
 const { celebrate, Joi } = require('celebrate');
+const cors = require('cors');
 const usersRoute = require('./routes/users');
 const cardsRoute = require('./routes/cards');
 const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const errors = require('./middlewares/errors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors');
-
 
 const app = express();
 const port = 3000;
 
-app.use(cors())
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,7 +38,7 @@ app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
-}); 
+});
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
@@ -67,8 +66,10 @@ app.use(auth);
 app.use('/users', usersRoute);
 app.use('/cards', cardsRoute);
 
-app.all('*', (req, res) => {
-  res.status(404).send({ message: 'Ресурс не найден' });
+app.all('*', (req, res, next) => {
+  const err = new Error('Ресурс не найден');
+  err.statusCode = 400;
+  return next(err);
 });
 
 app.use(errorLogger); // подключаем логгер ошибок

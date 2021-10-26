@@ -40,7 +40,7 @@ module.exports.deleteCard = (req, res, next) => {
         err.statusCode = 404;
         return next(err);
       }
-      if (card.owner === reqId) {
+      if (card.owner.toString() === reqId) {
         Card.findOneAndRemove({
           _id: req.params.cardId,
           owner: reqId,
