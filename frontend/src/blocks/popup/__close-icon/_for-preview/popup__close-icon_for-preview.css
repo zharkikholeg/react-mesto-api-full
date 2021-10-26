@@ -1,0 +1,15 @@
+.popup__close-icon_for-preview {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: -50px;
+  align-self: flex-end;
+}
+
+@media (max-width: 600px) {
+
+  .popup__close-icon_for-preview {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

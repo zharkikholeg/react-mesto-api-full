@@ -1,0 +1,14 @@
+.footer {
+  padding-left: 200px;
+}
+
+
+
+@media (max-width: 1250px) {
+
+  .footer {
+    padding-left: 19px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

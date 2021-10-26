@@ -1,0 +1,15 @@
+.page {
+  display: block;
+  max-width: 1280px;
+  min-width: 320px;
+  margin: auto;
+  font-family: Inter, Arial, sans-serif;
+}
+
+
+@media (max-width: 1250px) {
+  .page {
+    max-width: 320px;
+    margin: auto;
+  }
+}

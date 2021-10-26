@@ -1,0 +1,10 @@
+.popup__preview-container {
+  max-width: 75vw;
+  min-width: 250px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  
+}

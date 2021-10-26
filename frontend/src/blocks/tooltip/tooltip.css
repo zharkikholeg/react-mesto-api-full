@@ -1,0 +1,16 @@
+.tooltip__img {
+  width: 120px;
+  height: 120px;
+  align-self: center;
+  margin-top: 60px;
+}
+
+.tooltip__text {
+  color: #000000;
+  margin-top: 32px;
+  font-size: 24px;
+  font-weight: 900;
+  max-width: 358px;
+  align-self: center;
+  line-height: 29px;
+}

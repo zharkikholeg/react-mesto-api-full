@@ -1,0 +1,12 @@
+.profile__info-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1250px) {
+
+  .profile__info-wrapper {
+    padding-top: 26px;
+    align-self: center;
+  }
+}

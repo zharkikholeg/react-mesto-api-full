@@ -1,0 +1,11 @@
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  margin: auto;
+  margin-top: 24px;
+}
+
+
+
+

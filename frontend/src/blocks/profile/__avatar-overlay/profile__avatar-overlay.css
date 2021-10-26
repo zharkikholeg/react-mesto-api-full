@@ -1,0 +1,12 @@
+.profile__avatar-overlay {
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  visibility: hidden;
+}
+
+.profile__avatar-overlay_active {
+  visibility: visible;
+}

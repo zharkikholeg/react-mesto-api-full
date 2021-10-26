@@ -1,0 +1,21 @@
+.register {
+  color: #FFFFFF;
+  max-width: 880px;
+  margin-left: 200px;
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.register__bottom-text {
+  margin: 0;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.register__bottom-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
