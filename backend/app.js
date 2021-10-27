@@ -68,7 +68,7 @@ app.use('/cards', cardsRoute);
 
 app.all('*', (req, res, next) => {
   const err = new Error('Ресурс не найден');
-  err.statusCode = 400;
+  err.statusCode = 404;
   return next(err);
 });
 
